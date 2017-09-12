@@ -6,6 +6,25 @@ body {
 
 
 
+.logo {
+	width: 25%;
+	cursor: pointer;
+}
+
+.menu {
+	color: #E5E5E5;
+	font-size: 30px;
+}
+
+.container {
+	margin-top: 5%;
+}
+
+ul li {
+	text-decoration: none;
+	list-style-type: none;
+}
+
 /*
 body.loading {
   overflow: hidden !important;
