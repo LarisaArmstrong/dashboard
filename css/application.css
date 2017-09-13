@@ -21,6 +21,11 @@ body {
 	cursor: pointer;
 }
 
+.logo2 {
+	width: 50%;
+	cursor: pointer;
+}
+
 .menu {
 	color: #E5E5E5;
 	font-size: 30px;
@@ -31,6 +36,10 @@ body {
 	margin-top: 5%;
 }
 */
+
+.line {
+	width: 20%;
+}
 
 ul li {
 	font-family: 'Oswald', sans-serif;
@@ -46,9 +55,107 @@ a {
 }
 
 .menuItem:hover {
-	color: #6d6d6d;
+	color: #CEAA15;
 	transition: color 0.5s;
+	cursor: pointer;
 }
+
+.about, .signButton {
+	font-family: 'Oswald', sans-serif;
+	letter-spacing: 2px;
+	line-height: 25px;
+	color: #E5E5E5;
+	font-size: 18px;
+	float: right;
+	box-sizing: border-box;
+}
+
+.menuSection {
+	margin: 0;
+	padding: 0;
+}
+
+
+/*
+.signButton {
+	text-decoration: none;
+	margin-top: 30px;
+	
+	background-color: transparent;
+	border: 3px;
+	border-color: #CEAA15;
+}
+*/
+
+
+/*
+.line {
+	height: 300px;
+}
+*/
+
+
+.sign{
+  padding: padding: 25px 60px 25px 20px;;
+  background: #CEAA15;
+  border: 0;
+  color: #141414;
+  text-transform: uppercase;
+  font-family: helvetica;
+  font-size: 12px;
+  letter-spacing: 3px;
+  position: relative;
+  transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  cursor: pointer;
+  display: block;
+  margin-top: 50px;
+}
+
+.sign::after,
+.sign::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+    opacity: 0;
+  transition:  all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.sign::after{
+    width: 30px;
+    height: 1px;
+    background: #141414;
+    transform: translateX(-3px);
+    margin-top: 0px;
+}
+
+.sign::before{
+    content: "";
+    transform: rotate(-135deg) translateX(50%);
+    width: 11px;
+    height: 11px;
+    background: transparent;
+    border-left: 1px solid #141414;
+    border-bottom: 1px solid #141414;
+  margin-top: -1px;
+}
+
+
+.sign:hover{
+padding-right: 60px;
+}
+
+.sign:hover::after,
+.sign:hover::before{
+  opacity: 1;
+  right: 15px;
+}
+
+.signForm {
+	display: none;
+}
+
 
 /*
 body {
