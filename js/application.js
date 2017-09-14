@@ -1,3 +1,25 @@
+$(document).ready(function() {
+	$('#fullpage').fullpage({
+        verticalCentered: false, 
+        css3: true,
+        autoScrolling: true,
+		    fitToSection: true,
+
+  });
+    
+    
+    
+});    
+    
+    
+
+
+
+
+
+
+
+
 //var templates = [
 //	{name: 'Dark', value: 'css/dark.css'},
 //  {name: 'Light', value: 'css/light.css'}

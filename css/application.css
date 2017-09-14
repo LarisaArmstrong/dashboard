@@ -2,11 +2,36 @@
 body {
   background-size: cover;
   background-position: center;
+    
+ 
 }
+
+
 
 #landing-page {
     background-image: url(../img/ocean3.jpeg);
+    background-size: 100%;
+    
 }
+
+.lazy {
+    padding-top: 50px;
+}
+
+
+.logo {
+    width: 120%;
+}
+
+
+
+.dash {
+    width: 110%;
+    
+    
+}
+
+
 
 
 
