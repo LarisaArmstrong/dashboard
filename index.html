@@ -43,7 +43,7 @@
 		{{title}}
 		</div>
 	
-		<select id=“template”>
+		<select id=“templates” v-if="templates.can_list">
 	<option id=“dark”>Dark</option>
 	<option id=“light>Light</option>	
 </select>
@@ -72,9 +72,9 @@
 	
 	
 	<script src="https://unpkg.com/vue"></script>
-    <script src='js/jquery.min.js'></script>
-    <script src='js/jquery.fullpage.min.js'></script>
-    <script src='js/video.js'></script>
+    <script src='js/vendor/jquery.min.js'></script>
+    <script src='js/vendor/jquery.fullpage.min.js'></script>
+    <script src='js/vendor/video.js'></script>
     <!-- ...then load our JavaScript file that will use JQuery and the plugins. -->
     <script src='js/application.js'></script>
 			

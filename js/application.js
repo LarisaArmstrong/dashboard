@@ -1,6 +1,6 @@
 var templates = [
 	{name: 'Dark', value: 'css/dark.css'},
-// {name: 'Light', value: 'css/light.css'}
+  {name: 'Light', value: 'css/light.css'}
 ]
 
 var app = new Vue ({
@@ -9,7 +9,7 @@ var app = new Vue ({
 		title: "Title",
 		templates: {
 			list: templates,
-			count: templates.length,
+			can_list: templates.length > 1
 		}
 	}
 })
