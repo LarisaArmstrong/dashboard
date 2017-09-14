@@ -4,7 +4,9 @@ body {
   background-position: center;
 }
 
-
+#landing-page {
+    background-image: url(../img/ocean3.jpeg);
+}
 
 
 
