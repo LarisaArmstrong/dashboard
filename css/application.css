@@ -227,7 +227,11 @@ border-color: #CEAA15;
 
 .statsProfile {
     width: 90%;
-    border-collapse: collapse;
+}
+
+td, th {
+    border-bottom: 0; 
+    
 }
 
 .title {
@@ -236,6 +240,7 @@ border-color: #CEAA15;
    font-family: 'Oswald', sans-serif;
     margin-top: 2%;
     text-align: center;
+    letter-spacing: 2px;
 }
 
 .stats {
@@ -243,6 +248,77 @@ border-color: #CEAA15;
    font-size: 12px;
     text-align: center; 
 }
+
+.signup {
+    float: right;
+    box-sizing: border-box;
+}
+
+.logout {
+    width: 30%;
+    margin-top: 10%;
+}
+
+
+/*location section
+--------------------*/
+
+.locatePage {
+    width: 80%;
+}
+
+.locate {
+    width: 100%;
+}
+
+.map {
+    width: 75%;
+    position: absolute;
+    z-index: 1;
+}
+
+.points {
+    width: 100%;
+    position: relative;
+    z-index: 99;
+}
+
+.point {
+    width: 1%;
+    border-radius: 30%;
+    background-color: rgba(206, 170, 21, 0.7);
+}
+
+
+/*favorites section
+--------------------*/
+
+.fav {
+    display: flex;
+    justify-content: space-around;
+     padding-top: 5%;
+}
+
+.spots {
+    font-size: 21px;
+    font-family: 'Oswald', sans-serif;
+    text-align: left;
+    
+   
+    color: #E5E5E5;
+    letter-spacing: 3px;
+}
+
+.line2 {
+    width: 80%;
+    
+}
+
+.search {
+    margin: 0;
+}
+
+
 
 
 
