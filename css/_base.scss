@@ -428,19 +428,22 @@ td, th {
        height: 75%;
     } 
     
+
+    
     
     .lazy {
-    width: 100%; 
+    width: 20%; 
     padding-left: 4%;
     padding-top: 4%;
     }
 
     .logo {
-    width: 30%;    
+    width: 100%;    
     }
 
     .welcomeHead {
     text-align: left;
+     font-size: 14px;
 }
     
     .about {
@@ -455,16 +458,163 @@ td, th {
     .buttons {
     width: 100%;    
     display: list-item;
+   
+}
+    
+    
+    .menu {
+        width: 100%;
+        display: flex;
+        margin: auto;
+    }
+    
+    .cirle {
+    border-radius: 50%;
+    width: 35%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+    .user {
+    width: 100%;
+    border-radius: 50%;
+    }
+
+    .name {
+    font-size: 14px;
+    }
+    
+    
+    .logout {
+    width: 100%;
+    margin-top: 10%;
+}
+    
+    
+    .spots {
+    font-size: 14px;
     margin-top: 5%;
 }
 
+    .search {
+        width: 50%;
+        font-size: 12px;
+        margin: 0;
+    } 
+    
+    .line2 {
+        margin: 0;
+    }
+    
     
 }
 
 /* tablet */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
+     .container {
+        top: 22%;
+        left: 0;
+        width: 90%;
+       height: 70%;
+        
+    } 
+    
+    
+    .lazy {
+    width: 30%; 
+    padding-left: 5%;
+    padding-top: 4%;
+    margin-bottom: 2%;    
+    }
+
+    .logo {
+    width: 60%;    
+    }
+    
  
+    .welcomeHead {
+     font-size: 26px;
+}
+    
+    .about {
+   font-size: 21px;     
+}
+    
+    
+    
+    button {
+    width: 100%;
+    left: 0;
+    margin-top: 20px;
+}
+    
+    .buttons {
+    width: 80%;    
+    display: list-item; 
+    margin: auto;   
+}
+    
+    .menu {
+        width: 100%;
+        display: flex;
+        margin: auto;
+      
+    }
+    
+    .cirle {
+    border-radius: 50%;
+    width: 30%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+    .user {
+    width: 100%;
+    border-radius: 50%;
+    }
+
+    .name {
+    font-size: 18px;
+    }
+    
+    
+    .logout {
+    width: 50%;
+    margin-top: 10%;
+}
+    
+    
+    .spots {
+    font-size: 18px;
+    margin-top: 5%;
+        
+}
+
+    .search {
+        width: 50%;
+        font-size: 12px;
+        margin: 0;
+    } 
+    
+    .line2 {
+        margin: 0;
+    }
+    
+    
+    .stats {
+   font-size: 18px;
+}
+    
+    
+    .search {
+        width: 50%;
+        font-size: 12px;
+        margin-top: 3%;
+    } 
+    
+    
+    
 }
 
 
