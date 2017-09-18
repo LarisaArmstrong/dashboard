@@ -31,7 +31,8 @@ body {
 
 .lazy {
     width: 20%; 
-    padding: 4%;
+    padding-left: 4%;
+    padding-top: 4%;
 }
 
 .logo {
@@ -196,7 +197,55 @@ border-color: #CEAA15;
 
 
 /*profile section
-------------------------*/
+-----------------*/
+
+.menu {
+    width: 10%;
+    margin-left: 4%;
+    margin-top: 2%;
+}
+
+
+.item {
+    width: 100%;
+    color: rgba(229, 229, 229, 0.7); 
+    transition: all .3s ease-in-out;
+}
+
+.item:hover {
+    margin-bottom: 20%;
+    cursor: pointer;
+    color: rgba(206, 170, 21, 0.5);
+}
+
+.text {
+  color: rgba(229, 229, 229, 0.7); 
+  opacity: 0;
+  text-align: center;
+  padding-top: 0px;
+  transition: all .3s ease-in-out;
+}
+
+
+.item:hover .text {
+padding-top: 10%;    
+  opacity: 1;
+}
+
+.profileIcon {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .profile {
     width: 80%;
@@ -259,6 +308,10 @@ td, th {
     margin-top: 10%;
 }
 
+.offline {
+    color: rgb(186, 63, 47);
+}
+
 
 /*location section
 --------------------*/
@@ -272,7 +325,8 @@ td, th {
 }
 
 .map {
-    width: 75%;
+    padding-top: 2%;
+    width: 60%;
     position: absolute;
     z-index: 1;
 }
@@ -283,9 +337,25 @@ td, th {
     z-index: 99;
 }
 
+.infotext{
+    opacity: 0;
+    width: 20%;
+    background-color: transparent;
+    border-style: solid;
+    border: 1px;
+    border-color: rgba(206, 170, 21, 0.5); 
+}
+
+
+.point:hover {
+    opacity: 1;
+}
+
+
 .point {
-    width: 1%;
-    border-radius: 30%;
+    display: list-item;
+    width: 20px;
+    border-radius: 50%;
     background-color: rgba(206, 170, 21, 0.7);
 }
 
