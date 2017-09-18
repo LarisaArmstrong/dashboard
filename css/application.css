@@ -209,10 +209,11 @@ border-color: #CEAA15;
 .item {
     width: 100%;
     color: rgba(229, 229, 229, 0.7); 
-    transition: all .3s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 .item:hover {
+    transition: all .5s ease-in-out;
     margin-bottom: 20%;
     cursor: pointer;
     color: rgba(206, 170, 21, 0.5);
@@ -223,7 +224,7 @@ border-color: #CEAA15;
   opacity: 0;
   text-align: center;
   padding-top: 0px;
-  transition: all .3s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 
@@ -387,6 +388,23 @@ td, th {
 .search {
     margin: 0;
 }
+
+
+/*stats section
+--------------------*/
+
+.statsPage {
+    width: 100%;
+  
+}
+
+
+
+
+
+
+
+
 
 
 
