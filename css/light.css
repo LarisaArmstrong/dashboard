@@ -2,10 +2,9 @@
 @import url(vendor/skeleton.css);
 @import url(vendor/fullpage.min.css);
 @import url(vendor/video-js.css);
-@import url(font/css/font-awesome.css);
+@import url(../font/css/font-awesome.css);
 @import 'https://fonts.googleapis.com/css?family=Playfair+Display';
 @import 'https://fonts.googleapis.com/css?family=Oswald';
-@import url(bower_components/chartist/dist/chartist.min.css);
 body {
   background-size: cover;
   background-position: center;

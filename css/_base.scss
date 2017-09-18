@@ -2,14 +2,11 @@
 @import 'vendor/skeleton.css';
 @import 'vendor/fullpage.min.css';
 @import 'vendor/video-js.css';
-@import 'font/css/font-awesome.css';
+@import '../font/css/font-awesome.css';
 @import 'https://fonts.googleapis.com/css?family=Playfair+Display';
 @import 'https://fonts.googleapis.com/css?family=Oswald';
-@import 'bower_components/chartist/dist/chartist.min.css';
 
 @import 'mixins.scss';
-
-// need to set variables for light and dark template which is going to change when set
 
 
 body {
