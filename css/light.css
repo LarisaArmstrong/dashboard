@@ -497,3 +497,6 @@ hr {
 
 .signup::after {
   background: #212121; }
+
+.item:hover {
+  color: rgba(18, 121, 104, 0.7); }

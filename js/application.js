@@ -16,14 +16,22 @@ $(document).ready(function() {
 // login fake database
 
 var users = [
-    { id: 1, name: 'john', value: '', logo: ''},]
+  {id: 1, first_name: 'Joe', last_name: 'Tudor', email: 'jtudor@fuck.it'},
+  {id: 2, first_name: 'John', last_name: 'Doe', email: 'jdoe@fuck.it'},
+  {id: 3, first_name: 'Kim', last_name: 'Smith', email: 'ksmith@fuck.it'},
+  {id: 4, first_name: 'Amy', last_name: 'Green', email: 'agreen@fuck.it'},
+];
 
+// templates methods
 
 var templates = [
   { id: 1, name: 'Dark', value: 'css/dark.css', logo: 'css/dark.css'},
   { id: 2, name: 'Light', value: 'css/light.css', logo: 'css/light.css'}
 ];
 
+
+// VUE.JS APP
+// ---------------------
 
 var app = new Vue({
   el: '#app',

@@ -6,6 +6,7 @@ $text-color2: rgb(234, 234, 234);
 $line-color: #212121; 
 $offline-color: rgb(109, 29, 18);
 $button-color: #127968;
+$icons-color: rgba(18, 121, 104, 0.7); 
 
 body {
   color: $text-color;    
@@ -40,4 +41,8 @@ hr {
 
 .signup::after{
     background: $text-color;
+}
+
+.item:hover {
+    color: $icons-color;
 }

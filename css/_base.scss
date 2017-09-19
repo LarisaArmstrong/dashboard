@@ -8,6 +8,9 @@
 
 @import 'mixins.scss';
 
+
+//dafualt dark template variables
+
 $container-color: rgba(33, 33, 33, 0.7);
 $text-color: rgb(234, 234, 234);
 $line-color: rgb(195, 195, 195); 
@@ -35,7 +38,6 @@ body {
     height: 80%;
     margin-top: 3%;
 }
-
 
 
 .welcomePage {
