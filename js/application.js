@@ -25,13 +25,15 @@ var users = [
 // templates methods
 
 var templates = [
-  { id: 1, name: 'Dark', value: 'css/dark.css', logo: 'css/dark.css'},
-  { id: 2, name: 'Light', value: 'css/light.css', logo: 'css/light.css'}
+  { id: 1, name: 'night mode', value: 'css/dark.css', icon: 'fa fa-moon-o fa-2x'},
+  { id: 2, name: 'day mode', value: 'css/light.css', icon: 'fa fa-sun-o fa-2x'}
 ];
 
 
 // VUE.JS APP
 // ---------------------
+
+
 
 var app = new Vue({
   el: '#app',

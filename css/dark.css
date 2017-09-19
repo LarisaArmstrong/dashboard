@@ -64,6 +64,9 @@ hr {
   letter-spacing: 1px;
   margin-top: 5%; }
 
+i:hover {
+  cursor: pointer; }
+
 .buttons {
   display: -webkit-box;
   display: -webkit-flex;
