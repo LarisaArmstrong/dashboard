@@ -46,33 +46,20 @@
     <div class="menu">    
         
         
+<!--  template change css dark and light vue.js-->
+        
         <template v-for="template in templates">
-<!--
-          <button v-on:click="setTemplate(template.id)">
-            {{ template.icon }}
-            <span v-if="template.id == default_template">(Default)</span>
-          </button>
--->
-<div class="item">
+
+            <div class="item">
           <center><i v-bind:class="current_template.icon" aria-hidden="true" class="light" v-on:click="setTemplate(template.id)">
             </i>
             <div class="text">{{ template.name }}</div>
           </center> 
-            </div>    
+            </div> 
+            
         </template>
         
-<!--
-        <div class="item">
-              <center><i class="fa fa-moon-o fa-2x" aria-hidden="true" class="dark"></i> 
-                <div class="text">night mode</div></center>  
-     
-            </div>
-            
-            <div class="item">
-              <center><i class="fa fa-sun-o fa-2x" aria-hidden="true" class="light"></i>
-                  <div class="text">day mode</div>
-                 </center>      
-              </div>-->
+
 
         
         </div>
@@ -130,33 +117,24 @@
                 <center><i class="fa fa-heart fa-2x" aria-hidden="true" class="heart"></i>
                 <div class="text">favorites</div></center>
             </div>
-<!--
-            <div class="item">
-                <center><i class="fa fa-map-marker fa-2x" aria-hidden="true" class="mapIcon"></i>
-                <div class="text">location</div></center>
-            </div>
--->
+
             <div class="item">
                 <center><i class="fa fa-database fa-2x" aria-hidden="true" class="data"></i>
                 <div class="text">stats</div></center>
             </div>
-<!--
-            <div class="item">
-                <center><i class="fa fa-wrench fa-2x" aria-hidden="true" class="settings"></i>
-                <div class="text">settings</div></center>
-            </div>
--->
-            <div class="item">
-              <center><i class="fa fa-moon-o fa-2x" aria-hidden="true" class="dark"></i> 
-                <div class="text">night mode</div></center>  
-     
-            </div>
+    
             
+        <template v-for="template in templates">
+
             <div class="item">
-              <center><i class="fa fa-sun-o fa-2x" aria-hidden="true" class="light"></i>
-                  <div class="text">day mode</div>
-                 </center>      
-              </div>
+          <center><i v-bind:class="current_template.icon" aria-hidden="true" class="light" v-on:click="setTemplate(template.id)">
+            </i>
+            <div class="text">{{ template.name }}</div>
+          </center> 
+            </div> 
+            
+        </template>
+            
 
         
         </div>
@@ -181,7 +159,7 @@
             
             <div class="name">
             <hr class="line">
-            <center>{{ userName }}</center>
+            <center> User Name </center>
             <hr class="line">        
             </div>
 
@@ -329,36 +307,25 @@
                 <center><i class="fa fa-heart fa-2x" aria-hidden="true" class="heart"></i>
                 <div class="text">spots</div></center>
             </div>
-<!--
-            <div class="item">
-                <center><i class="fa fa-map-marker fa-2x" aria-hidden="true" class="mapIcon"></i>
-                <div class="text">location</div></center>
-            </div>
--->
+
             <div class="item">
                 <center><i class="fa fa-database fa-2x" aria-hidden="true" class="data"></i>
                 <div class="text">stats</div></center>
             </div>
-<!--
-            <div class="item">
-                <center><i class="fa fa-wrench fa-2x" aria-hidden="true" class="settings"></i>
-                <div class="text">settings</div></center>
-            </div>
--->
+
             
+                <template v-for="template in templates">
+
+            <div class="item">
+          <center><i v-bind:class="current_template.icon" aria-hidden="true" class="light" v-on:click="setTemplate(template.id)">
+            </i>
+            <div class="text">{{ template.name }}</div>
+          </center> 
+            </div> 
+            
+        </template>
              
-               <div class="item">
-              <center><i class="fa fa-moon-o fa-2x" aria-hidden="true" class="dark"></i> 
-                  <div class="text">night mode</div>
-                </center>      
-            </div>
-             
-             <div class="item">
-              <center><i class="fa fa-sun-o fa-2x" aria-hidden="true" class="light"></i>
-                  <div class="text">day mode</div>
-                 </center>      
-              </div>
-             
+
              
         
         </div>
@@ -440,22 +407,34 @@
                 <center><i class="fa fa-heart fa-2x" aria-hidden="true" class="heart"></i>
                 <div class="text">favorites</div></center>
             </div>
-<!--
-            <div class="item">
-                <center><i class="fa fa-map-marker fa-2x" aria-hidden="true" class="mapIcon"></i>
-                <div class="text">location</div></center>
-            </div>
--->
+
             <div class="item">
                 <center><i class="fa fa-database fa-2x" aria-hidden="true" class="data"></i>
                 <div class="text">stats</div></center>
             </div>
-<!--
+      
+             <template v-for="template in templates">
+
             <div class="item">
-                <center><i class="fa fa-wrench fa-2x" aria-hidden="true" class="settings"></i>
-                <div class="text">settings</div></center>
-            </div>
--->
+          <center><i v-bind:class="current_template.icon" aria-hidden="true" class="light" v-on:click="setTemplate(template.id)">
+            </i>
+            <div class="text">{{ template.name }}</div>
+          </center> 
+            </div> 
+            
+        </template>
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+<!--
               <div class="item">
               <center><i class="fa fa-moon-o fa-2x" aria-hidden="true" class="dark"></i>  
                 </center>      
@@ -465,6 +444,7 @@
               <center><i class="fa fa-sun-o fa-2x" aria-hidden="true" class="light"></i>
                  </center>      
               </div>
+-->
         
         </div>
         
