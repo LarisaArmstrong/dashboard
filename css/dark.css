@@ -10,7 +10,8 @@ body {
   background-position: center;
   background-image: url(../img/ocean3.jpeg);
   position: relative;
-  font-family: 'Playfair Display', serif; }
+  font-family: 'Playfair Display', serif;
+  color: #eaeaea; }
 
 .container {
   background-color: rgba(33, 33, 33, 0.7);
@@ -46,7 +47,6 @@ body {
 
 .welcome {
   width: 80%;
-  color: #E5E5E5;
   margin-top: 10%; }
 
 .welcomeHead {
@@ -252,7 +252,6 @@ button {
 
 .name {
   font-size: 18px;
-  color: #E5E5E5;
   letter-spacing: 2px; }
 
 .line {
@@ -265,7 +264,6 @@ td, th {
   border-bottom: 0; }
 
 .title {
-  color: #E5E5E5;
   font-size: 16px;
   font-family: 'Oswald', sans-serif;
   margin-top: 2%;
@@ -273,7 +271,6 @@ td, th {
   letter-spacing: 2px; }
 
 .stats {
-  color: #E5E5E5;
   font-size: 12px;
   text-align: center; }
 
@@ -341,7 +338,6 @@ td, th {
   font-size: 21px;
   font-family: 'Oswald', sans-serif;
   text-align: left;
-  color: #E5E5E5;
   letter-spacing: 3px; }
 
 .line2 {
@@ -470,6 +466,8 @@ td, th {
   .search {
     width: 50%;
     font-size: 12px;
-    margin-top: 3%; } }
+    margin-top: 3%; }
+  .section {
+    height: 100%; } }
 
 /* desktop */

@@ -11,35 +11,25 @@
 
       
       <link rel="stylesheet" href="css/light.css">
-      <link rel="stylesheet" href="css/dark.css">  
+      
+<!-- default stylesheet dark-->
+      
+      <link rel="stylesheet" href="css/dark.css">
       
   </head>
 	
 <body>
 
 	
-<!--  vue js -->
+<!--  vue js 
+------------------>
 
 <div class="app">
 
-  
-    
-    
+ <!--full page.js -->
     
  <div id="fullpage">
-					
-	
-     <!-- vue section -->
-    
-     
-     
-     
-     
-     
-     
-     
-     
-     
+   
 					
 <!--	homepage section 
 ------------------------->
@@ -63,6 +53,8 @@
         <center><h1 class="welcomeHead">WELCOME</h1>
         <hr>
         <p class="about">Lazy Surf provides you accurate data and statistics relevant to surfing. Here you can monitor progress and activity by engaging with the elements that make your preparation for surfing a good one. Just sit back and let us gather all the necessary resources for you and enjoy your surf time afterwards.</p></center>
+   
+            
          <div class="buttons">    
             <button class="login">log-in</button> 
             <button class="signup">sign up</button>    
@@ -102,18 +94,22 @@
                 <center><i class="fa fa-heart fa-2x" aria-hidden="true" class="heart"></i>
                 <div class="text">favorites</div></center>
             </div>
+<!--
             <div class="item">
                 <center><i class="fa fa-map-marker fa-2x" aria-hidden="true" class="mapIcon"></i>
                 <div class="text">location</div></center>
             </div>
+-->
             <div class="item">
                 <center><i class="fa fa-database fa-2x" aria-hidden="true" class="data"></i>
                 <div class="text">stats</div></center>
             </div>
+<!--
             <div class="item">
                 <center><i class="fa fa-wrench fa-2x" aria-hidden="true" class="settings"></i>
                 <div class="text">settings</div></center>
             </div>
+-->
             <div class="item">
               <center><i class="fa fa-moon-o fa-2x" aria-hidden="true" class="dark"></i>  
                 </center>      
@@ -142,7 +138,7 @@
             
             <div class="name">
             <hr class="line">
-            <center>Joel Tudor</center>
+            <center>{{ userName }}</center>
             <hr class="line">        
             </div>
 
@@ -171,7 +167,7 @@
 <tbody>
     <tr>
       <td class="stats">california, usa</td>
-      <td class="stats offline">offline</td>
+      <td class="stats offline">{{ status }}</td>
       <td></td>
     </tr>
     
@@ -198,11 +194,12 @@
 <!--	dashboard map section 
 ---------------------------------->
 					
-    <div id="dashMap" class="section" data-title="Locations" data-anchor="locations">
+<!--    <div id="dashMap" class="section" data-title="Locations" data-anchor="locations">-->
  
-        <!-- logo section-->
+<!--         logo section-->
         
-        <div class="lazy">     
+<!--        <div class="lazy">     -->
+<!--
         <img src="img/lazysurf_logo.png" class="logo">
         </div>
         
@@ -211,6 +208,8 @@
             <div class="item">
                 <center><i class="fa fa-user fa-2x" aria-hidden="true" class="userIcon"></i>
                     <div class="text">profile</div></center>    
+-->
+<!--
             </div>
             <div class="item">
                 <center><i class="fa fa-heart fa-2x" aria-hidden="true" class="heart"></i>
@@ -265,6 +264,7 @@
 							
     </div>			
 						
+-->
 	
 <!--	dashboard spots section 
 ---------------------------------->
@@ -286,19 +286,30 @@
                 <center><i class="fa fa-heart fa-2x" aria-hidden="true" class="heart"></i>
                 <div class="text">favorites</div></center>
             </div>
+<!--
             <div class="item">
                 <center><i class="fa fa-map-marker fa-2x" aria-hidden="true" class="mapIcon"></i>
                 <div class="text">location</div></center>
             </div>
+-->
             <div class="item">
                 <center><i class="fa fa-database fa-2x" aria-hidden="true" class="data"></i>
                 <div class="text">stats</div></center>
             </div>
+<!--
             <div class="item">
                 <center><i class="fa fa-wrench fa-2x" aria-hidden="true" class="settings"></i>
                 <div class="text">settings</div></center>
             </div>
+-->
             
+             
+               <div class="item">
+              <center><i class="fa fa-moon-o fa-2x" aria-hidden="true" class="dark"></i>  
+                </center>      
+            </div>
+             
+             
         
         </div>
         
@@ -323,25 +334,25 @@
   </thead>
   <tbody>
     <tr>
-      <td class="stats">Crantock, Cornwall.
+      <td class="stats">{{ location }}
 </td>
       <td class="stats">Surfed</td>
       <td class="stats"><button></button></td>
     </tr>
       <tr>
-     <td class="stats">South Bay, Scarborough.</td>
+     <td class="stats">{{ location }}</td>
       <td class="stats">surfed</td>
       <td class="stats"><button></button></td>
     </tr>
       <tr>
-      <td class="stats">Saunton Sands, Devon.
+      <td class="stats">{{ location }}
 
 </td>
       <td class="stats">Surfed</td>
       <td class="stats"><button></button></td>
     </tr>
       <tr>
-     <td class="stats">Inch, Co Kerry, Ireland. 
+     <td class="stats">{{ location }}
 </td>
       <td class="stats">Surfed</td>
       <td class="stats"><button></button></td>
@@ -380,19 +391,26 @@
                 <center><i class="fa fa-heart fa-2x" aria-hidden="true" class="heart"></i>
                 <div class="text">favorites</div></center>
             </div>
+<!--
             <div class="item">
                 <center><i class="fa fa-map-marker fa-2x" aria-hidden="true" class="mapIcon"></i>
                 <div class="text">location</div></center>
             </div>
+-->
             <div class="item">
                 <center><i class="fa fa-database fa-2x" aria-hidden="true" class="data"></i>
                 <div class="text">stats</div></center>
             </div>
+<!--
             <div class="item">
                 <center><i class="fa fa-wrench fa-2x" aria-hidden="true" class="settings"></i>
                 <div class="text">settings</div></center>
             </div>
-            
+-->
+              <div class="item">
+              <center><i class="fa fa-moon-o fa-2x" aria-hidden="true" class="dark"></i>  
+                </center>      
+            </div>
         
         </div>
         
@@ -405,13 +423,17 @@
      <div class="statsPage">   
          
          
-        <center><div class="statistics">
-        date <br>
-        time <br>
-        degrees <br>    
-        message if morning say good morning user name 
-        message if stats are good then display message hope you have a good surf time or hope yu are ready to catch some waves. 
-        </div></center>     
+        <div class="statistics">
+        {{ date }} <br>
+        {{ time }} <br>
+        {{ degrees }} <br>    
+        
+            
+            LINE GRAPH FOR WEEKDAYS - DYNAMIC DATA
+            
+            
+            
+        </div>    
         
          
      </div>    
