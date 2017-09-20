@@ -87,13 +87,6 @@ i:hover {
 }
 
 
-//
-//.buttons {
-//    display: flex;
-//    justify-content: space-between;
-//    margin-top: 5%;
-//}
-
 button {
     width: 0%;
 }
@@ -262,7 +255,21 @@ input[type="text"] {
 }
 
 
+.logbutton {
+    width: 20%;
+    border: 2px;
+  border-style: solid;
+  border-color: #CEAA15;    
+  color: #E5E5E5;
+  font-size: 12px;
+  letter-spacing: 3px;
+  position: relative;
+  cursor: pointer;
+}
 
+.loggedIn {
+text-decoration: none;
+}
 
 
 /*profile section
@@ -356,10 +363,6 @@ td, th {
     text-align: center; 
 }
 
-//.signup {
-//    float: right;
-//    box-sizing: border-box;
-//}
 
 .logout {
     width: 30%;
@@ -368,53 +371,6 @@ td, th {
 
 .offline {
     color: $offline-color;
-}
-
-
-/*location section
---------------------*/
-
-.locatePage {
-    width: 80%;
-}
-
-.locate {
-    width: 100%;
-}
-
-.map {
-    padding-top: 2%;
-    width: 60%;
-    position: absolute;
-    z-index: 1;
-}
-
-.points {
-    width: 100%;
-    position: relative;
-    z-index: 99;
-}
-
-.infotext{
-    opacity: 0;
-    width: 20%;
-    background-color: transparent;
-    border-style: solid;
-    border: 1px;
-    border-color: rgba(206, 170, 21, 0.5); 
-}
-
-
-.point:hover {
-    opacity: 1;
-}
-
-
-.point {
-    display: list-item;
-    width: 20px;
-    border-radius: 50%;
-    background-color: rgba(206, 170, 21, 0.7);
 }
 
 
@@ -439,9 +395,18 @@ td, th {
     
 }
 
-.search {
-    margin: 0;
+ul li {
+    list-style-type: none;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    cursor: pointer;
 }
+
+.completed {
+    text-decoration: line-through;
+}
+
+
 
 
 /*stats section

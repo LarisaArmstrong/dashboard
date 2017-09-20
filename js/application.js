@@ -33,16 +33,14 @@ var templates = [
 // VUE.JS APP
 // ---------------------
 
-Vue.component('tasks', {
-    props: ['list'],
-    template: '#tasks-template'
-});
 
 var app = new Vue({
   el: '#app',
   data: {
+    users_name: null,
     title: "Lazy Surf",
     users: users,
+//    userName: 'Joel Tudor',  
     templates: templates,
     default_template: 2,
     current_template: templates[0],
@@ -53,7 +51,8 @@ var app = new Vue({
          {body: 'Skaill Bay, Orkney, Scotland', completed: false},
          {body: 'Inch, Co Kerry, Ireland', completed: false},
          {body: 'Brandon Bay, Ireland', completed: false},
-    ]
+    ],
+      
    
   },
   methods: {
@@ -70,8 +69,21 @@ var app = new Vue({
         keys.push(key);
       }
       return keys;
-    }
-  }
+    },
+      
+    userName: function() {
+       return this.users_name;
+         
+  },
+    
+//    logIn: function(){
+//      this.userName = this.userName.split('').join('')
+//    }  
+      
+      
+}  
+    
+
 });
 
 

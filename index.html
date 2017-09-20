@@ -8,9 +8,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
     
-      
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">  
       
   </head>
 	
@@ -20,6 +19,8 @@
 <!--  vue js 
 ------------------>
 
+    
+    
 <div id="app">
     
     <link rel="stylesheet" v-bind:href="current_template.value">
@@ -47,17 +48,26 @@
         
         
 <!--  template change css dark and light vue.js-->
-        
-        <template v-for="template in templates">
 
-            <div class="item">
-          <center><i v-bind:class="current_template.icon" aria-hidden="true" class="light" v-on:click="setTemplate(template.id)">
+            {{ current_template.value }}
+        
+<!--    maybe dont use icon and wrap click in a or button tag    -->
+        
+            <div class="item" v-if="current_template.value == 'css/dark.css'">
+          <center><i class="fa fa-sun-o fa-2x light" v-on:click="setTemplate(1)" >
             </i>
-            <div class="text">{{ template.name }}</div>
-          </center> 
+            <div class="text">day mode</div>
+          </center>    
             </div> 
             
-        </template>
+            <div class="item" v-if="current_template.value == 'css/light.css'">
+          <center><i class="fa fa-moon-o fa-2x light" v-on:click="setTemplate(2)" >
+            </i>
+            <div class="text">night mode</div>
+          </center>    
+            </div> 
+            
+
         
 
 
@@ -98,12 +108,13 @@ class="close" style= "cursor: pointer" title="Close">&times;</span>
 
     <div class="loginContainer">
     <label><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <input type="text" placeholder="Enter Username" name="uname" required v-model="users_name">
 
     <label><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
 
-      <button type="submit" class="login">log-in</button>
+    <a href="#profile" class="loggedIn">log-in</a>
+   
     </div>
 
   </form>
@@ -123,7 +134,7 @@ class="close" style= "cursor: pointer" title="Close">&times;</span>
 <!--	dashboard profile section 
 ---------------------------------->
 					
-    <div id="dashPorfile" class="section" data-title="Profile" data-anchor="profile">
+    <div id="dashProfile" class="section" data-title="Profile" data-anchor="profile">
  
         <!-- logo section-->
         
@@ -186,7 +197,7 @@ class="close" style= "cursor: pointer" title="Close">&times;</span>
             
             <div class="name">
             <hr class="line">
-            <center> User Name </center>
+            <center> {{ users_name }} </center>
             <hr class="line">        
             </div>
 
@@ -237,82 +248,7 @@ class="close" style= "cursor: pointer" title="Close">&times;</span>
 	   </div>
 							
     </div>			
-						
 
-<!--	dashboard map section 
----------------------------------->
-					
-<!--    <div id="dashMap" class="section" data-title="Locations" data-anchor="locations">-->
- 
-<!--         logo section-->
-        
-<!--        <div class="lazy">     -->
-<!--
-        <img src="img/lazysurf_logo.png" class="logo">
-        </div>
-        
-        
-         <div class="menu">
-            <div class="item">
-                <center><i class="fa fa-user fa-2x" aria-hidden="true" class="userIcon"></i>
-                    <div class="text">profile</div></center>    
--->
-<!--
-            </div>
-            <div class="item">
-                <center><i class="fa fa-heart fa-2x" aria-hidden="true" class="heart"></i>
-                <div class="text">favorites</div></center>
-            </div>
-            <div class="item">
-                <center><i class="fa fa-map-marker fa-2x" aria-hidden="true" class="mapIcon"></i>
-                <div class="text">location</div></center>
-            </div>
-            <div class="item">
-                <center><i class="fa fa-database fa-2x" aria-hidden="true" class="data"></i>
-                <div class="text">stats</div></center>
-            </div>
-            <div class="item">
-                <center><i class="fa fa-wrench fa-2x" aria-hidden="true" class="settings"></i>
-                <div class="text">settings</div></center>
-            </div>
-            
-        
-        </div>
-        
-        
-        
-        
-        
-     <div class="dashboard container">
-
-     <div class="locatePage">   
-         
-         
-        <div class="locate">
-        
-          <img src="img/map.png" class="map">
-        <div class="points">
-            <div class="info">
-                <p class="infotext">california</p>
-                <button class="point"></button>
-            </div>
-            
-            <button class="point"></button>
-            <button class="point"></button>
-            <button class="point"></button>
-            <button class="point"></button>
-         </div> 
-            
-         </div>   
-        
-         
-     </div>    
-      
-	   </div>
-							
-    </div>			
-						
--->
 	
 <!--	dashboard spots section 
 ---------------------------------->
@@ -341,7 +277,7 @@ class="close" style= "cursor: pointer" title="Close">&times;</span>
             </div>
 
             
-                <template v-for="template in templates">
+        <template v-for="template in templates">
 
             <div class="item">
           <center><i v-bind:class="current_template.icon" aria-hidden="true" class="light" v-on:click="setTemplate(template.id)">
@@ -367,34 +303,26 @@ class="close" style= "cursor: pointer" title="Close">&times;</span>
          
          
         <center><div class="fav">
-        <h1 class="spots">SPOTS</h1>   
+        <h1 class="spots">SPOTS I WOULD LOVE TO SURF</h1>
  
         </div></center>     
           <center><hr class="line2"></center>  
          
          
 <!--  VUE.JS  task list surfed completed or not-->
-         
-         <tasks :list="tasks"></tasks>
-         
-         <template id="tasks-template">
+
             <ul>
-              <li :class="{ 'completed': task.completed }" v-for="task in list" @click="task.completed = ! task.completed"> 
+              <li :class="{'completed': task.completed}" 
+              v-for="task in tasks"
+              @click= "task.completed = ! task.completed"> 
                 
                {{ task.body}}
      
               </li>
              
             </ul>
-  
-         </template>
-         
-         
-         
-         
-         
-         
-         
+
+    
          
          
 <!--
@@ -477,28 +405,7 @@ class="close" style= "cursor: pointer" title="Close">&times;</span>
             </div> 
             
         </template>
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-<!--
-              <div class="item">
-              <center><i class="fa fa-moon-o fa-2x" aria-hidden="true" class="dark"></i>  
-                </center>      
-              </div>
-             
-             <div class="item">
-              <center><i class="fa fa-sun-o fa-2x" aria-hidden="true" class="light"></i>
-                 </center>      
-              </div>
--->
+
         
         </div>
         
@@ -548,6 +455,7 @@ class="close" style= "cursor: pointer" title="Close">&times;</span>
 	
 	<script src="https://unpkg.com/vue"></script>
      <script src="https://unpkg.com/vue-meta@1.2.0/lib/vue-meta.js"></script>
+    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
     <script src='js/vendor/jquery.min.js'></script>
     <script src='js/vendor/jquery.fullpage.min.js'></script>
     <script src='js/vendor/video.js'></script>
