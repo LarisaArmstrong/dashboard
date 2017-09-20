@@ -76,13 +76,40 @@
         <center><h1 class="welcomeHead">WELCOME</h1>
         <hr>
         <p class="about">Lazy Surf provides you accurate data and statistics relevant to surfing. Here you can monitor progress and activity by engaging with the elements that make your preparation for surfing a good one. Just sit back and let us gather all the necessary resources for you and enjoy your surf time afterwards.</p></center>
-   
+ 
             
-         <div class="buttons">    
-            <button class="login">log-in</button> 
-            <button class="signup">sign up</button>    
-         </div>
             
+            
+<!--   LOGIN FORM  -->
+            
+            
+            
+            
+    <!-- Button to open the modal login form -->
+<button onclick="document.getElementById('id01').style.display='block'" class="signup">log-in</button>
+
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" 
+class="close" style= "cursor: pointer" title="Close">&times;</span>
+
+  <!-- Modal Content -->
+  <form class="modal-content animate">
+
+    <div class="loginContainer">
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit" class="login">log-in</button>
+    </div>
+
+  </form>
+</div>        
+            
+       
         </div>     
         
          
@@ -188,7 +215,7 @@
 <tbody>
     <tr>
       <td class="stats">california, usa</td>
-      <td class="stats offline">{{ status }}</td>
+      <td class="stats offline"> status </td>
       <td></td>
     </tr>
     
@@ -345,6 +372,32 @@
         </div></center>     
           <center><hr class="line2"></center>  
          
+         
+<!--  VUE.JS  task list surfed completed or not-->
+         
+         <tasks :list="tasks"></tasks>
+         
+         <template id="tasks-template">
+            <ul>
+              <li :class="{ 'completed': task.completed }" v-for="task in list" @click="task.completed = ! task.completed"> 
+                
+               {{ task.body}}
+     
+              </li>
+             
+            </ul>
+  
+         </template>
+         
+         
+         
+         
+         
+         
+         
+         
+         
+<!--
         <table class="statsProfile u-full-width">
   <thead>
   </thead>
@@ -376,6 +429,7 @@
     </tbody>      
 
 </table> 
+-->
          
      </div>    
       
@@ -458,9 +512,9 @@
          
          
         <div class="statistics">
-        {{ date }} <br>
-        {{ time }} <br>
-        {{ degrees }} <br>    
+         date  <br>
+         time  <br>
+         degrees <br>    
         
             
             LINE GRAPH FOR WEEKDAYS - DYNAMIC DATA

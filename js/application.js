@@ -33,16 +33,28 @@ var templates = [
 // VUE.JS APP
 // ---------------------
 
-
+Vue.component('tasks', {
+    props: ['list'],
+    template: '#tasks-template'
+});
 
 var app = new Vue({
   el: '#app',
   data: {
-    title: "Hello, VueJS",
+    title: "Lazy Surf",
     users: users,
     templates: templates,
     default_template: 2,
-    current_template: templates[0]
+    current_template: templates[0],
+     tasks: [
+         {body: 'Crantock, Cornwall', completed: false},
+         {body: 'South Bay, Scarborough', completed: false},
+         {body: 'Saunton Sands, Devon', completed: false},
+         {body: 'Skaill Bay, Orkney, Scotland', completed: false},
+         {body: 'Inch, Co Kerry, Ireland', completed: false},
+         {body: 'Brandon Bay, Ireland', completed: false},
+    ]
+   
   },
   methods: {
     setTemplate: function(id){
@@ -61,6 +73,26 @@ var app = new Vue({
     }
   }
 });
+
+
+
+
+
+
+
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+
+
 
 
 

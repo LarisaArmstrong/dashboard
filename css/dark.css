@@ -277,10 +277,12 @@ td, th {
   font-size: 12px;
   text-align: center; }
 
+/*
 .signup {
   float: right;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+*/
 
 .logout {
   width: 30%;
