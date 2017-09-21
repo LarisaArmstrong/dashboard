@@ -15,6 +15,7 @@ $container-color: rgba(33, 33, 33, 0.7);
 $text-color: rgb(234, 234, 234);
 $line-color: rgb(195, 195, 195); 
 $offline-color: rgb(186, 63, 47);
+$icons-color: rgba(206, 170, 21, 0.7);
 
 body {
   background-size: cover;
@@ -81,6 +82,24 @@ hr {
     margin-top: 5%;
 }
 
+
+//
+//a {
+//    color: #E5E5E5;
+//}
+
+
+
+
+i:hover, a:hover {
+//    text-decoration: none;
+    color: $icons-color;
+     transition: color 0.5s;
+}
+
+a:focus, a:active {
+    text-decoration: none;
+}
 
 i:hover {
     cursor: pointer;
@@ -417,14 +436,88 @@ ul li {
   
 }
 
+.swell {
+    margin-left: 5%;
+    margin-top: 5%;
+    font-size: 18px;
+}
 
 
 
+.spots {
+   font-size: 18px;
+//     margin-top: 5%;
+//     margin-right: 5%;
+}
+
+#datePicker {
+    background: transparent;
+    color: rgb(229, 229, 229);
+    margin-left: 5%;
+}
+
+.degrees {
+    color: #0a7d91;
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin-top: 5%;
+    margin-right: 15%;
+    
+}
+
+.beach {
+    margin-left: 5%;
+    margin-bottom: 2%;
+    color: rgb(206, 170, 21);
+}
+
+.statistics {
+    width: 400px;
+    height: 300px;
+//    background-color: rgba(229, 229, 229, 0.7);
+//    margin-left: 5%;
+    
+}
+
+
+/* Use this selector to override the line style on a given series */
+.ct-series-a .ct-line {
+  /* Set the colour of this series line */
+   stroke: #0a7d91;
+  /* Control the thikness of your lines */
+  stroke-width: 2px;
+  /* Create a dashed line with a pattern */   
+}
+
+/* This selector overrides the points style on line charts. Points on line charts are actually just very short strokes. This allows you to customize even the point size in CSS */
+.ct-series-a .ct-point {
+  /* Colour of your points */
+ 
+stroke: rgba(206, 170, 21, 0.8);    
+  /* Size of your points */
+  stroke-width: 10px;
+  /* Make your points appear as squares */
+  stroke-linecap: square;
+}
+
+.ct-label {
+    color: rgb(229, 229, 229)
+}
+
+.ct-grid {
+    stroke: rgb(229, 229, 229)
+}
 
 
 
+.twosides, .twoHead {
+    display: flex;
+    justify-content: space-between;
+}
 
-
+.spotsTo {
+    margin-right: 5%;
+}
 
 
 

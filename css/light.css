@@ -24,7 +24,7 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 60%;
-  height: 80%;
+  height: 85%;
   margin-top: 3%; }
 
 .welcomePage {
@@ -64,22 +64,20 @@ hr {
   letter-spacing: 1px;
   margin-top: 5%; }
 
+i:hover, a:hover {
+  color: rgba(206, 170, 21, 0.7);
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s; }
+
+a:focus, a:active {
+  text-decoration: none; }
+
 i:hover {
   cursor: pointer; }
 
-.buttons {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin-top: 5%; }
-
 button {
-  width: 40%; }
+  width: 0%; }
 
 .login {
   text-transform: lowercase;
@@ -202,6 +200,56 @@ button {
   opacity: 1;
   right: 15px; }
 
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  width: 40%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid; }
+
+.loginContainer {
+  padding: 16px; }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding-top: 60px; }
+
+.modal-content {
+  width: 80%; }
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer; }
+
+.logbutton {
+  width: 20%;
+  border: 2px;
+  border-style: solid;
+  border-color: #CEAA15;
+  color: #E5E5E5;
+  font-size: 12px;
+  letter-spacing: 3px;
+  position: relative;
+  cursor: pointer; }
+
+.loggedIn {
+  text-decoration: none; }
+
 /*profile section
 -----------------*/
 .menu {
@@ -277,63 +325,12 @@ td, th {
   font-size: 12px;
   text-align: center; }
 
-
-.completed {
-    text-decoration: line-through;
-}
-
-ul li {
-    list-style-type: none;
-    margin-bottom: 5%;
-    margin-left: 10%;
-    cursor: pointer;
-}
-
-
-
-
 .logout {
   width: 30%;
   margin-top: 10%; }
 
 .offline {
   color: #ba3f2f; }
-
-/*location section
---------------------*/
-.locatePage {
-  width: 80%; }
-
-.locate {
-  width: 100%; }
-
-.map {
-  padding-top: 2%;
-  width: 60%;
-  position: absolute;
-  z-index: 1; }
-
-.points {
-  width: 100%;
-  position: relative;
-  z-index: 99; }
-
-.infotext {
-  opacity: 0;
-  width: 20%;
-  background-color: transparent;
-  border-style: solid;
-  border: 1px;
-  border-color: rgba(206, 170, 21, 0.5); }
-
-.point:hover {
-  opacity: 1; }
-
-.point {
-  display: list-item;
-  width: 20px;
-  border-radius: 50%;
-  background-color: rgba(206, 170, 21, 0.7); }
 
 /*favorites section
 --------------------*/
@@ -356,13 +353,84 @@ ul li {
 .line2 {
   width: 80%; }
 
-.search {
-  margin: 0; }
+ul li {
+  list-style-type: none;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  cursor: pointer; }
+
+.completed {
+  text-decoration: line-through; }
 
 /*stats section
 --------------------*/
 .statsPage {
   width: 100%; }
+
+.swell {
+  margin-left: 5%;
+  margin-top: 5%;
+  font-size: 18px; }
+
+.spots {
+  font-size: 18px; }
+
+#datePicker {
+  background: transparent;
+  color: #e5e5e5;
+  margin-left: 5%; }
+
+.degrees {
+  color: #0a7d91;
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  margin-top: 5%;
+  margin-right: 15%; }
+
+.beach {
+  margin-left: 5%;
+  margin-bottom: 2%;
+  color: #ceaa15; }
+
+.statistics {
+  width: 400px;
+  height: 300px; }
+
+/* Use this selector to override the line style on a given series */
+.ct-series-a .ct-line {
+  /* Set the colour of this series line */
+  stroke: #0a7d91;
+  /* Control the thikness of your lines */
+  stroke-width: 2px;
+  /* Create a dashed line with a pattern */ }
+
+/* This selector overrides the points style on line charts. Points on line charts are actually just very short strokes. This allows you to customize even the point size in CSS */
+.ct-series-a .ct-point {
+  /* Colour of your points */
+  stroke: rgba(206, 170, 21, 0.8);
+  /* Size of your points */
+  stroke-width: 10px;
+  /* Make your points appear as squares */
+  stroke-linecap: square; }
+
+.ct-label {
+  color: #e5e5e5; }
+
+.ct-grid {
+  stroke: #e5e5e5; }
+
+.twosides, .twoHead {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.spotsTo {
+  margin-right: 5%; }
 
 /*media queries - responsive styles*/
 /*mobile */

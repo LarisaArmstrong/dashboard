@@ -7,9 +7,18 @@ $(document).ready(function() {
 
   });
     
+  var now = new Date();
+
+  var day = ("0" + now.getDate()).slice(-2);
+  var month = ("0" + (now.getMonth() + 1)).slice(-2);
+
+  var today = now.getFullYear()+"-"+(month)+"-"+(day) ;
+
+  $('#datePicker').val(today);
+
+}); 
     
-    
-});  
+ 
 
 
 
@@ -104,6 +113,22 @@ window.onclick = function(event) {
 
 
 
+var data = {
+  labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+
+  series: [
+    [8, 6, 6.5, 7, 5, 4.6, 3.4]
+  ]
+};
+
+
+var options = {
+  width: 400,
+  height: 300
+};
+
+
+new Chartist.Line('.ct-chart', data, options);
 
 
 

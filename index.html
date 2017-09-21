@@ -49,25 +49,29 @@
         
 <!--  template change css dark and light vue.js-->
 
-            {{ current_template.value }}
         
-<!--    maybe dont use icon and wrap click in a or button tag    -->
+        <template v-if="current_template.value == 'css/dark.css'">
         
-            <div class="item" v-if="current_template.value == 'css/dark.css'">
-          <center><i class="fa fa-sun-o fa-2x light" v-on:click="setTemplate(1)" >
+            <div class="item">
+          <center><i class="fa fa-sun-o fa-2x light"  v-on:click="setTemplate(2)" >
             </i>
             <div class="text">day mode</div>
           </center>    
             </div> 
             
-            <div class="item" v-if="current_template.value == 'css/light.css'">
-          <center><i class="fa fa-moon-o fa-2x light" v-on:click="setTemplate(2)" >
+            
+        </template>
+        
+        <template v-if="current_template.value == 'css/light.css'">
+        
+            <div class="item">
+          <center><i class="fa fa-moon-o fa-2x light" v-on:click="setTemplate(1)" >
             </i>
             <div class="text">night mode</div>
           </center>    
             </div> 
             
-
+        </template>
         
 
 
@@ -112,8 +116,8 @@ class="close" style= "cursor: pointer" title="Close">&times;</span>
 
     <label><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <a href="#profile" class="loggedIn">log-in</a>
+     
+        
    
     </div>
 
@@ -148,27 +152,39 @@ class="close" style= "cursor: pointer" title="Close">&times;</span>
         
         <div class="menu">
             <div class="item">
-                <center><i class="fa fa-user fa-2x" aria-hidden="true" class="userIcon"></i>
+                <center><a href="#profile"><i class="fa fa-user fa-2x" aria-hidden="true" class="userIcon"></i></a>
                     <div class="text">profile</div></center>    
             </div>
             <div class="item">
-                <center><i class="fa fa-heart fa-2x" aria-hidden="true" class="heart"></i>
+                <center><a href="#favorites"><i class="fa fa-heart fa-2x" aria-hidden="true" class="heart"></i></a>
                 <div class="text">favorites</div></center>
             </div>
 
             <div class="item">
-                <center><i class="fa fa-database fa-2x" aria-hidden="true" class="data"></i>
+                <center><a href="#stats"><i class="fa fa-database fa-2x" aria-hidden="true" class="data" href="#stats"></i></a>
                 <div class="text">stats</div></center>
             </div>
     
             
-        <template v-for="template in templates">
-
+          <template v-if="current_template.value == 'css/dark.css'">
+        
             <div class="item">
-          <center><i v-bind:class="current_template.icon" aria-hidden="true" class="light" v-on:click="setTemplate(template.id)">
+          <center><i class="fa fa-sun-o fa-2x light"  v-on:click="setTemplate(2)" >
             </i>
-            <div class="text">{{ template.name }}</div>
-          </center> 
+            <div class="text">day mode</div>
+          </center>    
+            </div> 
+            
+            
+        </template>
+        
+        <template v-if="current_template.value == 'css/light.css'">
+        
+            <div class="item">
+          <center><i class="fa fa-moon-o fa-2x light" v-on:click="setTemplate(1)" >
+            </i>
+            <div class="text">night mode</div>
+          </center>    
             </div> 
             
         </template>
@@ -263,27 +279,39 @@ class="close" style= "cursor: pointer" title="Close">&times;</span>
         
          <div class="menu">
             <div class="item">
-                <center><i class="fa fa-user fa-2x" aria-hidden="true" class="userIcon"></i>
+                <center><a href="#profile"><i class="fa fa-user fa-2x" aria-hidden="true" class="userIcon"></i></a>
                     <div class="text">profile</div></center>    
             </div>
             <div class="item">
-                <center><i class="fa fa-heart fa-2x" aria-hidden="true" class="heart"></i>
-                <div class="text">spots</div></center>
+                <center><a href="#favorites"><i class="fa fa-heart fa-2x" aria-hidden="true" class="heart"></i></a>
+                <div class="text">favorites</div></center>
             </div>
 
             <div class="item">
-                <center><i class="fa fa-database fa-2x" aria-hidden="true" class="data"></i>
+                <center><a href="#stats"><i class="fa fa-database fa-2x" aria-hidden="true" class="data" href="#stats"></i></a>
                 <div class="text">stats</div></center>
             </div>
 
             
-        <template v-for="template in templates">
-
+          <template v-if="current_template.value == 'css/dark.css'">
+        
             <div class="item">
-          <center><i v-bind:class="current_template.icon" aria-hidden="true" class="light" v-on:click="setTemplate(template.id)">
+          <center><i class="fa fa-sun-o fa-2x light"  v-on:click="setTemplate(2)" >
             </i>
-            <div class="text">{{ template.name }}</div>
-          </center> 
+            <div class="text">day mode</div>
+          </center>    
+            </div> 
+            
+            
+        </template>
+        
+        <template v-if="current_template.value == 'css/light.css'">
+        
+            <div class="item">
+          <center><i class="fa fa-moon-o fa-2x light" v-on:click="setTemplate(1)" >
+            </i>
+            <div class="text">night mode</div>
+          </center>    
             </div> 
             
         </template>
@@ -380,28 +408,40 @@ class="close" style= "cursor: pointer" title="Close">&times;</span>
         <img src="img/lazysurf_logo.png" class="logo">
         </div>
         
-         <div class="menu">
+       <div class="menu">
             <div class="item">
-                <center><i class="fa fa-user fa-2x" aria-hidden="true" class="userIcon"></i>
+                <center><a href="#profile"><i class="fa fa-user fa-2x" aria-hidden="true" class="userIcon"></i></a>
                     <div class="text">profile</div></center>    
             </div>
             <div class="item">
-                <center><i class="fa fa-heart fa-2x" aria-hidden="true" class="heart"></i>
+                <center><a href="#favorites"><i class="fa fa-heart fa-2x" aria-hidden="true" class="heart"></i></a>
                 <div class="text">favorites</div></center>
             </div>
 
             <div class="item">
-                <center><i class="fa fa-database fa-2x" aria-hidden="true" class="data"></i>
+                <center><a href="#stats"><i class="fa fa-database fa-2x" aria-hidden="true" class="data" href="#stats"></i></a>
                 <div class="text">stats</div></center>
             </div>
       
-             <template v-for="template in templates">
-
+               <template v-if="current_template.value == 'css/dark.css'">
+        
             <div class="item">
-          <center><i v-bind:class="current_template.icon" aria-hidden="true" class="light" v-on:click="setTemplate(template.id)">
+          <center><i class="fa fa-sun-o fa-2x light"  v-on:click="setTemplate(2)" >
             </i>
-            <div class="text">{{ template.name }}</div>
-          </center> 
+            <div class="text">day mode</div>
+          </center>    
+            </div> 
+            
+            
+        </template>
+        
+        <template v-if="current_template.value == 'css/light.css'">
+        
+            <div class="item">
+          <center><i class="fa fa-moon-o fa-2x light" v-on:click="setTemplate(1)" >
+            </i>
+            <div class="text">night mode</div>
+          </center>    
             </div> 
             
         </template>
@@ -417,20 +457,43 @@ class="close" style= "cursor: pointer" title="Close">&times;</span>
 
      <div class="statsPage">   
          
+         <div class="twoHead">
+         
+         <h1 class="spots swell">SWELL FORECAST THIS WEEK:</h1> 
+         
+         <h1 class="degrees">32° SW 5ft</h1>
+         
+        </div>     
+             
+         <input id="datePicker" type="date" />
+      
+        <p class="beach">Your location - Long Beach, California</p>
+         
+         <div class="twosides">
          
         <div class="statistics">
-         date  <br>
-         time  <br>
-         degrees <br>    
+            
+         <div class="ct-chart ct-perfect-fourth"></div>
+            
         
-            
-            LINE GRAPH FOR WEEKDAYS - DYNAMIC DATA
-            
-            
-            
-        </div>    
-        
+        </div> 
          
+         <div class="spotsTo">
+             <h1 class="spots">SPOTS I WOULD LOVE TO SURF:</h1>
+              <p class="beach">Click on location to mark as surfed</p>
+            <ul>
+              <li :class="{'completed': task.completed}" 
+              v-for="task in tasks"
+              @click= "task.completed = ! task.completed"> 
+                
+               {{ task.body}}
+     
+              </li>
+             
+            </ul>
+        </div>
+        
+        </div> 
      </div>    
       
 	   </div>
