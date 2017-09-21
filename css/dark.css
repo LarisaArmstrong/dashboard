@@ -64,6 +64,10 @@ hr {
   letter-spacing: 1px;
   margin-top: 5%; }
 
+a {
+  text-decoration: none;
+  color: #E5E5E5; }
+
 i:hover, a:hover {
   color: rgba(206, 170, 21, 0.7);
   -webkit-transition: color 0.5s;
@@ -329,8 +333,8 @@ td, th {
   width: 30%;
   margin-top: 10%; }
 
-.offline {
-  color: #ba3f2f; }
+.online {
+  color: #138913; }
 
 /*favorites section
 --------------------*/
@@ -377,11 +381,11 @@ ul li {
 
 #datePicker {
   background: transparent;
-  color: #e5e5e5;
+  color: #eaeaea;
   margin-left: 5%; }
 
 .degrees {
-  color: #0a7d91;
+  color: #ceaa15;
   font-family: 'Playfair Display', serif;
   font-size: 40px;
   margin-top: 5%;
@@ -396,28 +400,20 @@ ul li {
   width: 400px;
   height: 300px; }
 
-/* Use this selector to override the line style on a given series */
 .ct-series-a .ct-line {
-  /* Set the colour of this series line */
-  stroke: #0a7d91;
-  /* Control the thikness of your lines */
-  stroke-width: 2px;
-  /* Create a dashed line with a pattern */ }
+  stroke: #127968;
+  stroke-width: 2px; }
 
-/* This selector overrides the points style on line charts. Points on line charts are actually just very short strokes. This allows you to customize even the point size in CSS */
 .ct-series-a .ct-point {
-  /* Colour of your points */
-  stroke: rgba(206, 170, 21, 0.8);
-  /* Size of your points */
+  stroke: #ceaa15;
   stroke-width: 10px;
-  /* Make your points appear as squares */
   stroke-linecap: square; }
 
 .ct-label {
-  color: #e5e5e5; }
+  color: #eaeaea; }
 
 .ct-grid {
-  stroke: #e5e5e5; }
+  stroke: #eaeaea; }
 
 .twosides, .twoHead {
   display: -webkit-box;

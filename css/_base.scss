@@ -16,6 +16,8 @@ $text-color: rgb(234, 234, 234);
 $line-color: rgb(195, 195, 195); 
 $offline-color: rgb(186, 63, 47);
 $icons-color: rgba(206, 170, 21, 0.7);
+$stats-line-color: rgb(206, 170, 21);
+$stats-line-color2: rgb(18, 121, 104);
 
 body {
   background-size: cover;
@@ -89,7 +91,10 @@ hr {
 //}
 
 
-
+a {
+    text-decoration: none;
+    color: #E5E5E5;
+}
 
 i:hover, a:hover {
 //    text-decoration: none;
@@ -388,8 +393,8 @@ td, th {
     margin-top: 10%;
 }
 
-.offline {
-    color: $offline-color;
+.online {
+    color: #138913;
 }
 
 
@@ -452,12 +457,12 @@ ul li {
 
 #datePicker {
     background: transparent;
-    color: rgb(229, 229, 229);
+    color: $text-color;
     margin-left: 5%;
 }
 
 .degrees {
-    color: #0a7d91;
+    color: $stats-line-color;
     font-family: 'Playfair Display', serif;
     font-size: 40px;
     margin-top: 5%;
@@ -468,44 +473,40 @@ ul li {
 .beach {
     margin-left: 5%;
     margin-bottom: 2%;
-    color: rgb(206, 170, 21);
+    color: $stats-line-color;
 }
 
 .statistics {
     width: 400px;
     height: 300px;
-//    background-color: rgba(229, 229, 229, 0.7);
-//    margin-left: 5%;
+
     
 }
 
-
-/* Use this selector to override the line style on a given series */
 .ct-series-a .ct-line {
-  /* Set the colour of this series line */
-   stroke: #0a7d91;
-  /* Control the thikness of your lines */
+
+   stroke: $stats-line-color2;
+  
   stroke-width: 2px;
-  /* Create a dashed line with a pattern */   
+     
 }
 
-/* This selector overrides the points style on line charts. Points on line charts are actually just very short strokes. This allows you to customize even the point size in CSS */
+
 .ct-series-a .ct-point {
-  /* Colour of your points */
+
+stroke: $stats-line-color;    
  
-stroke: rgba(206, 170, 21, 0.8);    
-  /* Size of your points */
   stroke-width: 10px;
-  /* Make your points appear as squares */
+
   stroke-linecap: square;
 }
 
 .ct-label {
-    color: rgb(229, 229, 229)
+    color: $text-color;
 }
 
 .ct-grid {
-    stroke: rgb(229, 229, 229)
+    stroke: $text-color;
 }
 
 
