@@ -1,0 +1,86 @@
+@import 'base.scss';
+
+$container-color: rgba(234, 234, 234, 0.7);
+$text-color: #212121;
+$text-color2: rgb(234, 234, 234);
+$line-color: #212121; 
+$offline-color: rgb(109, 29, 18);
+$button-color: #127968;
+$icons-color: rgba(18, 121, 104, 0.7); 
+$stats-line-color: rgb(18, 121, 104);
+$stats-line-color2: #CEAA15;
+
+body {
+  color: $text-color;    
+}
+
+.container {
+    background-color: $container-color;   
+}
+
+hr {
+    background-color: $line-color;
+}
+
+.offline {
+    color: $offline-color;
+}
+
+.login {
+  background: $button-color;
+  color: $text-color2;
+}
+
+.signup, .signup:hover {
+  border-color: $button-color; 
+  color: $text-color;     
+}
+
+.signup::before {
+    border-left: 1px solid $text-color;
+    border-bottom: 1px solid $text-color;
+}
+
+.signup::after{
+    background: $text-color;
+}
+
+.item:hover {
+    color: $icons-color;
+}
+
+i:hover, a:hover {
+  color: $icons-color;
+}  
+
+#datePicker {
+    color: $text-color;
+}
+
+
+.degrees {
+    color: $stats-line-color;
+}
+
+.beach {
+    color: $stats-line-color;
+}
+
+
+.ct-series-a .ct-line {
+    stroke: $stats-line-color2;
+}
+
+.ct-series-a .ct-point {
+stroke: $stats-line-color;    
+}
+
+.ct-label {
+    color: $text-color;
+}
+
+.ct-grid {
+    stroke: $text-color;
+}
+
+
