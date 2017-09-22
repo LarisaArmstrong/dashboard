@@ -223,25 +223,31 @@ input[type="text"] {
   z-index: 1;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   overflow: auto;
-  padding-top: 60px; }
+  margin-top: 27%;
+  margin-left: 40%; }
 
 .modal-content {
   width: 80%; }
 
 .close {
-  position: absolute;
-  right: 25px;
+  right: 10px;
   top: 0;
-  color: #000;
+  color: #e3e1e1;
   font-size: 35px;
   font-weight: bold;
   cursor: pointer; }
 
+.close:hover {
+  color: #980808;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s; }
+
 .logbutton {
-  width: 20%;
+  width: 40%;
   border: 2px;
   border-style: solid;
   border-color: #CEAA15;
@@ -252,7 +258,11 @@ input[type="text"] {
   cursor: pointer; }
 
 .loggedIn {
-  text-decoration: none; }
+  text-decoration: none;
+  margin-left: 3%; }
+
+button {
+  width: 40%; }
 
 /*profile section
 -----------------*/
@@ -428,6 +438,9 @@ ul li {
 .spotsTo {
   margin-right: 5%; }
 
+.mobileError {
+  display: none; }
+
 /*media queries - responsive styles*/
 /*mobile */
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -481,7 +494,35 @@ ul li {
     font-size: 12px;
     margin: 0; }
   .line2 {
-    margin: 0; } }
+    margin: 0; }
+  .twosides {
+    display: block; }
+  .spotsTo {
+    width: 100%; }
+  .degrees {
+    font-size: 16px; }
+  .spots {
+    margin-left: 5%; }
+  li {
+    display: inline;
+    text-align: left;
+    margin-left: 0; }
+  ul {
+    width: 100%;
+    margin-left: 0;
+    font-size: 14px;
+    text-align: left; }
+  .ct-chart, .ct-perfect-fourth {
+    display: none; }
+  .statistics {
+    display: none; }
+  .mobileError {
+    display: inherit;
+    margin-top: 50%; }
+  .statsPage {
+    display: none; }
+  .title {
+    font-size: 11px; } }
 
 /* tablet */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -545,7 +586,22 @@ ul li {
     font-size: 12px;
     margin-top: 3%; }
   .section {
-    height: 100%; } }
+    height: 100%; }
+  .twosides {
+    display: block; }
+  .spotsTo {
+    width: 100%; }
+  .spots {
+    margin-left: 5%; }
+  li {
+    display: inline;
+    text-align: left;
+    margin-left: 0; }
+  ul {
+    width: 100%;
+    margin-left: 0;
+    font-size: 14px;
+    text-align: left; } }
 
 /* desktop */
 body {

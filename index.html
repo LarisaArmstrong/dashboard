@@ -29,8 +29,7 @@
     
  <div id="fullpage" v-bind:class="current_template.name">
      
-     
-   
+  
 					
 <!--	homepage section 
 ------------------------->
@@ -120,6 +119,8 @@ class="close" style= "cursor: pointer" title="Close">&times;</span>
         
    
     </div>
+      
+    <a href="#profile" class="loggedIn">LOG-IN</a>  
 
   </form>
 </div>        
@@ -214,59 +215,51 @@ class="close" style= "cursor: pointer" title="Close">&times;</span>
             <hr class="line">        
             </div>
 
-<table class="statsProfile u-full-width">
-  <thead>
-    <tr>
-      <th class="title">MESSAGES</th>
-      <th class="title">FOLLOWERS</th>
-      <th class="title">FOLLOWING</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="stats">2 unread</td>
-      <td class="stats">10k</td>
-      <td class="stats">560</td>
-    </tr>
-    </tbody>      
-<thead>
-    <tr>
-      <th class="title">LOCATION</th>
-      <th class="title">USER STATUS</th>
-      <th class="title">EDIT</th>
-    </tr>
-</thead> 
-<tbody>
-    <tr>
-      <td class="stats">california, usa</td>
-      <td class="stats online"> online </td>
-      <td></td>
-    </tr>
-    
-  </tbody>
-</table>
-            
-            
-             <button class="signup logout">log-out</button>
-            
-            
+        <table class="statsProfile u-full-width">
+          <thead>
+            <tr>
+              <th class="title">MESSAGES</th>
+              <th class="title">FOLLOWERS</th>
+              <th class="title">FOLLOWING</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="stats">2 unread</td>
+              <td class="stats">10k</td>
+              <td class="stats">560</td>
+            </tr>
+            </tbody>      
+        <thead>
+            <tr>
+              <th class="title">LOCATION</th>
+              <th class="title">USER STATUS</th>
+              <th class="title">EDIT</th>
+            </tr>
+        </thead> 
+        <tbody>
+            <tr>
+              <td class="stats">california, usa</td>
+              <td class="stats online"> online </td>
+              <td></td>
+            </tr>
 
-       
+          </tbody>
+        </table>
             
+            
+        <button class="signup logout">log-out</button>
+   
         </div></center>     
         
          
      </div>    
       
-	   </div>
+   </div>
 							
-    </div>			
+</div>			
 
-	
-
-     
-     
-     
+ 
 
 <!--	dashboard stats section 
 ---------------------------------->
@@ -323,7 +316,11 @@ class="close" style= "cursor: pointer" title="Close">&times;</span>
         
      <div class="dashboard container">
 
-     <div class="statsPage">   
+         <center><div class="mobileError">Please view stats on either a tablet or laptop/desktop screen</div></center>
+         
+     <div class="statsPage">  
+         
+         
          
          <div class="twoHead">
          
@@ -336,6 +333,8 @@ class="close" style= "cursor: pointer" title="Close">&times;</span>
          <input id="datePicker" type="date" />
       
         <p class="beach">Your location - Long Beach, California</p>
+         
+         
          
          <div class="twosides">
          
@@ -380,10 +379,8 @@ class="close" style= "cursor: pointer" title="Close">&times;</span>
  </div>      
 	
 
-    <!-- Load JQuery and plugins... -->
-	
-	
-	
+    <!-- Loaded JQuery and plugins... -->
+
 	<script src="https://unpkg.com/vue"></script>
      <script src="https://unpkg.com/vue-meta@1.2.0/lib/vue-meta.js"></script>
     <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>

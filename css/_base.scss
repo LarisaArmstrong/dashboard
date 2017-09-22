@@ -257,10 +257,11 @@ input[type="text"] {
     z-index: 1; 
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
+    width: 50%; 
+    height: 50%; 
     overflow: auto; 
-    padding-top: 60px;
+    margin-top: 27%;
+    margin-left: 40%;
 }
 
 .modal-content {
@@ -269,18 +270,23 @@ input[type="text"] {
 
 
 .close {
-    position: absolute;
-    right: 25px;
+//    position: absolute;
+    right: 10px;
     top: 0; 
-    color: #000;
+    color: #e3e1e1;
     font-size: 35px;
     font-weight: bold;
     cursor: pointer;
 }
 
+.close:hover {
+    color: #980808;
+    transition: color 0.5s;
+}
+
 
 .logbutton {
-    width: 20%;
+    width: 40%;
     border: 2px;
   border-style: solid;
   border-color: #CEAA15;    
@@ -293,8 +299,14 @@ input[type="text"] {
 
 .loggedIn {
 text-decoration: none;
+margin-left: 3%;
+    
 }
 
+
+button {
+    width: 40%;
+}
 
 /*profile section
 -----------------*/
@@ -478,9 +490,7 @@ ul li {
 
 .statistics {
     width: 400px;
-    height: 300px;
-
-    
+    height: 300px;  
 }
 
 .ct-series-a .ct-line {
@@ -522,7 +532,9 @@ stroke: $stats-line-color;
 
 
 
-
+.mobileError{
+    display: none;
+}
 
 
 
@@ -620,6 +632,64 @@ stroke: $stats-line-color;
         margin: 0;
     }
     
+    
+       .twosides {
+        display: block;
+    }
+    
+    .spotsTo {
+        width: 100%;
+//     margin-left: 2%;
+//       
+    }
+    
+    
+    .degrees {
+        font-size: 16px;
+       
+    }
+    
+    .spots {
+        margin-left: 5%;
+    }
+ 
+    li {
+         display: inline;
+        text-align: left;
+        margin-left: 0;
+        
+    }
+    
+    ul {
+        width: 100%;
+        margin-left: 0;
+        font-size: 14px;
+        text-align: left;
+    }
+    
+    .ct-chart, .ct-perfect-fourth{
+        display: none;
+    }
+    
+    .statistics {
+        display: none;
+    }
+    
+    .mobileError {
+        display: inherit;
+        margin-top: 50%;
+    }
+    
+    .statsPage {
+        display: none;
+    }
+    
+   
+    
+    
+    .title {
+        font-size: 11px;
+    }
     
 }
 
@@ -730,6 +800,35 @@ stroke: $stats-line-color;
     .section {
         height: 100%;
     } 
+    
+    .twosides {
+        display: block;
+    }
+    
+    .spotsTo {
+        width: 100%;
+//     margin-left: 2%;
+//       
+    }
+    
+    
+    .spots {
+        margin-left: 5%;
+    }
+ 
+    li {
+         display: inline;
+        text-align: left;
+        margin-left: 0;
+        
+    }
+    
+    ul {
+        width: 100%;
+        margin-left: 0;
+        font-size: 14px;
+        text-align: left;
+    }
     
 }
 
