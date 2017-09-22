@@ -18,8 +18,6 @@ $(document).ready(function() {
 
 }); 
     
- 
-
 
 
 // login fake database
@@ -84,11 +82,7 @@ var app = new Vue({
        return this.users_name;
          
   },
-    
-//    logIn: function(){
-//      this.userName = this.userName.split('').join('')
-//    }  
-      
+   
       
 }  
     
@@ -96,22 +90,18 @@ var app = new Vue({
 });
 
 
+// login
 
-
-
-
-
-// Get the modal
 var modal = document.getElementById('id01');
 
-// When the user clicks anywhere outside of the modal, close it
+
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 }
 
-
+// chart
 
 var data = {
   labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
